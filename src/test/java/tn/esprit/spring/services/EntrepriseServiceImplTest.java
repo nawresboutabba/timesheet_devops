@@ -23,14 +23,14 @@ import tn.esprit.spring.services.IEntrepriseService;
 	 void testAddEntreprise() {
 		es.addEntreprise(new Entreprise("Naw", "ESPRIT"));
 		List<Entreprise> listEntreprises = es.retrieveAllEntreprises();
-		Assertions.assertEquals(9, listEntreprises.size());
+		Assertions.assertEquals(10, listEntreprises.size());
 	}
 
 	@Test
 	@Order(2)
 	 void testRetrieveAllEntreprises() {
 		List<Entreprise> listEntreprises = es.retrieveAllEntreprises();
-		Assertions.assertEquals(9, listEntreprises.size());
+		Assertions.assertEquals(10, listEntreprises.size());
 	}
 
 	@Test
@@ -43,6 +43,7 @@ import tn.esprit.spring.services.IEntrepriseService;
 		listEntreprises = es.retrieveAllEntreprises();
 		Assertions.assertEquals("neverland", listEntreprises.get(0).getName());
 	}
+	
 
 	@Test
 	@Order(4)
@@ -50,7 +51,7 @@ import tn.esprit.spring.services.IEntrepriseService;
 		List<Entreprise> listEntreprises = es.retrieveAllEntreprises();
 		es.deleteEntreprise(listEntreprises.get(0).getId());
 		listEntreprises = es.retrieveAllEntreprises();
-		Assertions.assertEquals(8, listEntreprises.size());
+		Assertions.assertEquals(9, listEntreprises.size());
 	}
 	
 
