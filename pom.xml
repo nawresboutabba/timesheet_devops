@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>timesheet_devops</artifactId>
+	<artifactId>timesheet-devops</artifactId>
 	<version>1.0</version>
 	<name>timesheet_devops</name>
 	<description>Demo project for Spring Boot</description>
@@ -95,5 +95,11 @@
 		</plugin>
 		</plugins>
 	</build>
-
+   <distributionManagement>
+    <repository>
+      <id>deploymentRepo</id>
+      <name>Corporate Repository</name>
+      <url>http://localhost:8081/repository/maven-releases/</url>
+    </repository>
+</distributionManagement>
 </project>
